@@ -1,0 +1,54 @@
+.gen-ui-stream {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .gen-ui-stream {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.gen-ui-stream__messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gen-ui-stream__message {
+  display: flex;
+}
+
+.gen-ui-stream__message--user {
+  justify-content: flex-end;
+}
+
+.gen-ui-stream__message--user .gen-ui-stream__text {
+  background: var(--color-accent);
+  color: #ffffff;
+  border-radius: 16px 16px 4px 16px;
+}
+
+.gen-ui-stream__message--agent .gen-ui-stream__text {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px 16px 16px 4px;
+}
+
+.gen-ui-stream__text {
+  margin: 0;
+  padding: 10px 16px;
+  max-width: 75%;
+}
+
+.gen-ui-stream__error {
+  color: var(--color-danger);
+  background: var(--color-danger-surface);
+  border-radius: 10px;
+  padding: 10px 14px;
+}

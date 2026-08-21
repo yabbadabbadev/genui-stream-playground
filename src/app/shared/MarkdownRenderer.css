@@ -1,0 +1,54 @@
+.markdown-renderer {
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.markdown-renderer > * + * {
+  margin-top: 12px;
+}
+
+.markdown-renderer h1,
+.markdown-renderer h2,
+.markdown-renderer h3 {
+  color: var(--color-text);
+  line-height: 1.25;
+}
+
+.markdown-renderer ul,
+.markdown-renderer ol {
+  padding-left: 24px;
+}
+
+.markdown-renderer table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.markdown-renderer th,
+.markdown-renderer td {
+  border: 1px solid var(--color-border);
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.markdown-renderer th {
+  background: var(--color-background);
+}
+
+.markdown-renderer__code--inline {
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+.markdown-renderer__code-block {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  overflow-x: auto;
+}

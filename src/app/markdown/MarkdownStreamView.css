@@ -1,0 +1,63 @@
+.markdown-stream {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .markdown-stream {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.markdown-stream__messages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.markdown-stream__message {
+  max-width: 100%;
+}
+
+.markdown-stream__message--user {
+  align-self: flex-end;
+}
+
+.markdown-stream__message--agent {
+  align-self: stretch;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.markdown-stream__prompt {
+  background: var(--color-accent);
+  color: #ffffff;
+  border-radius: 16px 16px 4px 16px;
+  padding: 10px 16px;
+  margin: 0;
+}
+
+.markdown-stream__caret {
+  color: var(--color-accent);
+  animation: markdown-stream-blink 1s steps(2) infinite;
+}
+
+.markdown-stream__error {
+  color: var(--color-danger);
+  background: var(--color-danger-surface);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+@keyframes markdown-stream-blink {
+  50% {
+    opacity: 0;
+  }
+}

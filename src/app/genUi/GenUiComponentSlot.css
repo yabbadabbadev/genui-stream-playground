@@ -1,0 +1,8 @@
+.gen-ui-slot--unknown {
+  margin: 0;
+  padding: 10px 14px;
+  border: 1px dashed var(--color-border);
+  border-radius: 10px;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
